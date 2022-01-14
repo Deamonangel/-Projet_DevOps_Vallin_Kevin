@@ -1,0 +1,59 @@
+#cloud-config
+# Add groups to the system
+# Adds the ubuntu group with members 'root' and 'sys'
+# and the empty group hashicorp.
+groups:
+  - ubuntu: [root,sys]
+  - hashicorp
+# Add users to the system. Users are added after groups are added.
+users:
+  - default
+  - name: deploy
+    gecos: deploy
+    shell: /bin/bash
+    primary_group: hashicorp
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys: 
+      -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
+# Downloads the golang package
+packages:
+  - python3
+runcmd:
+  -   alias python=python3

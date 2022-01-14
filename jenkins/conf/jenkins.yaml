@@ -81,4 +81,4 @@ tool:
 
 jobs:
   - file: /var/jenkins_config/jobs/folders.groovy
-  - file: /var/jenkins_config/jobs/sb3t.groovy
+  - file: /var/jenkins_config/jobs/jobs1.groovy
